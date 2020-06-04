@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import ListSelection from './components/ListSelection';
+import ShoppingListsView from './components/ShoppingListsView';
 import Header from './components/Header';
 
 const Stack = createStackNavigator();
@@ -21,7 +21,7 @@ function App() {
           }}>
           <Stack.Screen
             name="ListSelection"
-            component={ListSelection}
+            component={ShoppingListsView}
             options={{ title: 'Shopping lists' }}
           />
         </Stack.Navigator>
