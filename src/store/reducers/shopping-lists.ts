@@ -19,6 +19,24 @@ const initialState: ShoppingListState = [
     created: '2020-06-01T8:00:00Z',
     completed: false,
   },
+  {
+    id: 3,
+    title: 'Testi 1',
+    created: '2020-05-12T8:00:00Z',
+    completed: true,
+  },
+  {
+    id: 4,
+    title: 'Testi 2',
+    created: '2020-05-14T8:00:00Z',
+    completed: false,
+  },
+  {
+    id: 5,
+    title: 'Testi 3',
+    created: '2020-05-12T8:00:00Z',
+    completed: true,
+  },
 ];
 
 export default (state = initialState, action) => {
