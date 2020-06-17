@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, StyleSheet, View } from 'react-native';
-import { TouchableRipple } from 'react-native-paper';
+import { Text, StyleSheet } from 'react-native';
+import { TouchableRipple, Surface } from 'react-native-paper';
 
 import { ShoppingList } from 'src/store/types';
 
@@ -15,11 +15,9 @@ function ShoppingListCard(props: Props) {
     <TouchableRipple
       onPress={() => console.log('Pressed')}
       onLongPress={() => console.log('Longpressed')}>
-      {/* TODO: Switch from View to Surface when bug with Android is fixed:
-          https://github.com/callstack/react-native-paper/issues/1990*/}
-      <View style={styles.cardContainer}>
+      <Surface style={styles.cardContainer}>
         <Text>{shoppingList.title}</Text>
-      </View>
+      </Surface>
     </TouchableRipple>
   );
 }
@@ -28,6 +26,10 @@ const styles = StyleSheet.create({
   cardContainer: {
     flexDirection: 'row',
     padding: 15,
+
+    /* TODO: Get rid of this when this issue is resolved:
+       https://github.com/callstack/react-native-paper/issues/1990 */
+    backgroundColor: 'rgba(255, 255, 255, 0)',
   },
 });
 
